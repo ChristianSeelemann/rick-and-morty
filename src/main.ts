@@ -23,6 +23,7 @@ const page = createElement('div', {
       childElements: [
         createElement('input', {
           placeholder: 'Search your Charakter',
+          className: 'searchInput',
         }),
       ],
     }),
