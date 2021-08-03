@@ -20,7 +20,7 @@ header {
   text-align: center;
 }
 
-main {
+.search {
   text-align: center;
 }
 
@@ -35,4 +35,14 @@ main {
   margin-bottom: 4rem;
   letter-spacing: 0.15rem;
   color: #26a0b6;
+}
+
+.character {
+  background-color: #24282f;
+  padding: 4rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 3rem;
+  row-gap: 2rem;
+  margin-top: 4rem;
 }

@@ -1,7 +1,7 @@
 import { createElement } from '../../utils/createElement';
 import './character.css';
 
-export function characterCard() {
+export function characterCard(): HTMLElement {
   const card = createElement('article', {
     className: 'card',
     childElements: [

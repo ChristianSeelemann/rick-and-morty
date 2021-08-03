@@ -19,12 +19,23 @@ const page = createElement('div', {
         }),
       ],
     }),
-    createElement('main', {
+    createElement('section', {
+      className: 'search',
       childElements: [
         createElement('input', {
           placeholder: 'Search your Charakter',
-          className: 'searchInput',
+          className: 'search__input',
         }),
+      ],
+    }),
+    createElement('main', {
+      className: 'character',
+      childElements: [
+        characterCard(),
+        characterCard(),
+        characterCard(),
+        characterCard(),
+        characterCard(),
       ],
     }),
   ],
@@ -32,6 +43,4 @@ const page = createElement('div', {
 
 if (app !== null) {
   app.append(page);
-  app.append(characterCard());
-  app.append(characterCard());
 }
