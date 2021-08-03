@@ -9,22 +9,30 @@ const page = createElement('div', {
   childElements: [
     createElement('header', {
       childElements: [
-        createElement('img', {
-          src: './src/assets/Rick_and_Morty.svg',
-          className: 'logo__img',
+        createElement('section', {
+          className: 'header__heading',
+          childElements: [
+            createElement('img', {
+              src: './src/assets/Header_BG.svg',
+              className: 'header__svg',
+            }),
+            createElement('img', {
+              src: './src/assets/Rick_and_Morty.svg',
+              className: 'logo__img',
+            }),
+            createElement('h2', {
+              innerText: 'Fanpage',
+            }),
+          ],
         }),
-        createElement('h2', {
-          innerText: 'Fanpage',
-          className: 'headline__h2',
-        }),
-      ],
-    }),
-    createElement('section', {
-      className: 'search',
-      childElements: [
-        createElement('input', {
-          placeholder: 'Search your Charakter',
-          className: 'search__input',
+        createElement('section', {
+          className: 'search',
+          childElements: [
+            createElement('input', {
+              placeholder: 'Search your Charakter',
+              className: 'search__input',
+            }),
+          ],
         }),
       ],
     }),
