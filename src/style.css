@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -5,4 +7,17 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.logo__img {
+  max-width: 80%;
+}
+
+.headline__h2 {
+  font-family: 'Patrick Hand', cursive;
+  margin-top: -1rem;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  letter-spacing: 0.15rem;
+  color: #26a0b6;
 }
