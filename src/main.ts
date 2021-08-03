@@ -1,5 +1,6 @@
 import './style.css';
 import { createElement } from './utils/createElement';
+import { characterCard } from './components/character/character';
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
@@ -30,4 +31,6 @@ const page = createElement('div', {
 
 if (app !== null) {
   app.append(page);
+  app.append(characterCard());
+  app.append(characterCard());
 }
