@@ -1,6 +1,6 @@
 import { Character } from '../../types';
 import { createElement } from '../../utils/createElement';
-import './character.css';
+import styles from './character.module.css';
 
 export function characterCard({
   name,
@@ -11,14 +11,14 @@ export function characterCard({
   gender,
 }: Character): HTMLElement {
   const card = createElement('article', {
-    className: 'card',
+    className: styles.card,
     childElements: [
       createElement('img', {
-        className: 'card__img',
+        className: styles.img,
         src: thumbnail,
       }),
       createElement('div', {
-        className: 'card__info',
+        className: styles.info,
         childElements: [
           createElement('section', {
             childElements: [
@@ -26,7 +26,7 @@ export function characterCard({
                 innerText: name,
               }),
               createElement('p', {
-                className: 'card__info__status',
+                className: styles.info__status,
                 innerText: `${
                   status === 'Alive' ? '🟢 ' : '🔴 '
                 } ${status} - ${species}`,

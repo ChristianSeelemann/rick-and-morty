@@ -7,14 +7,14 @@
     rgb(0 0 0 / 6%) 0 0.125rem 0.25rem -0.05rem;
 }
 
-.card__img {
+.img {
   width: 40%;
   border-radius: 0.75rem 0 0 0.75rem;
   object-fit: cover;
   object-position: center;
 }
 
-.card__info {
+.info {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -22,29 +22,29 @@
   justify-content: center;
 }
 
-.card__info h3 {
+.info h3 {
   margin: 0 0 0.25rem 0;
   font-size: 1.75rem;
 }
 
-.card__info h4 {
+.info h4 {
   color: #b1b1b1;
   margin: 0;
 }
 
-.card__info section p {
+.info section p {
   font-size: 1.25rem;
   margin: 0 0 1rem 0;
 }
 
-.card__info section:last-child p {
+.info section:last-child p {
   margin-bottom: 0;
 }
 
-.card__info__status {
+.info__status {
   font-weight: 500;
 }
 
-.card__info section .card__info__status {
+.info section .info__status {
   font-size: 1.15rem;
 }
