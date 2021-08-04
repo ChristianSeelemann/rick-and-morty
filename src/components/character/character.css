@@ -42,22 +42,9 @@
 }
 
 .card__info__status {
-  position: relative;
-  padding-left: 1.25rem;
   font-weight: 500;
 }
 
 .card__info section .card__info__status {
   font-size: 1.15rem;
-}
-
-.card__info__status::before {
-  width: 0.75rem;
-  height: 0.75rem;
-  content: '';
-  background-color: rgb(209, 36, 36);
-  position: absolute;
-  border-radius: 50%;
-  left: 0;
-  top: 0.35rem;
 }

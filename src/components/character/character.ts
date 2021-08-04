@@ -1,13 +1,21 @@
+import { Character } from '../../types';
 import { createElement } from '../../utils/createElement';
 import './character.css';
 
-export function characterCard(): HTMLElement {
+export function characterCard({
+  name,
+  thumbnail,
+  status,
+  species,
+  lastLocation,
+  gender,
+}: Character): HTMLElement {
   const card = createElement('article', {
     className: 'card',
     childElements: [
       createElement('img', {
         className: 'card__img',
-        src: 'https://rickandmortyapi.com/api/character/avatar/31.jpeg',
+        src: thumbnail,
       }),
       createElement('div', {
         className: 'card__info',
@@ -15,11 +23,13 @@ export function characterCard(): HTMLElement {
           createElement('section', {
             childElements: [
               createElement('h3', {
-                innerText: 'Baby Wizard',
+                innerText: name,
               }),
               createElement('p', {
                 className: 'card__info__status',
-                innerText: 'Dead - Human',
+                innerText: `${
+                  status === 'Alive' ? '🟢 ' : '🔴 '
+                } ${status} - ${species}`,
               }),
             ],
           }),
@@ -29,17 +39,17 @@ export function characterCard(): HTMLElement {
                 innerText: 'Last known location:',
               }),
               createElement('p', {
-                innerText: 'Earth (Replacement Dimension)',
+                innerText: lastLocation,
               }),
             ],
           }),
           createElement('section', {
             childElements: [
               createElement('h4', {
-                innerText: 'First seen in:',
+                innerText: 'Gender:',
               }),
               createElement('p', {
-                innerText: 'Total Rickall',
+                innerText: gender,
               }),
             ],
           }),
