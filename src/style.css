@@ -58,13 +58,24 @@ header h2 {
   background-color: #24282f;
   padding: 4rem 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
   column-gap: 1.5rem;
   row-gap: 1.75rem;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 1200px) {
   .character {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .character {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    padding: 2rem 1rem;
+  }
+  .search {
+    padding: 0 0 2.75rem 0;
   }
 }
