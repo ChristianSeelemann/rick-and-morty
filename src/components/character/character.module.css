@@ -14,6 +14,18 @@
   object-position: center;
 }
 
+@media (max-width: 670px) {
+  .card {
+    flex-direction: column;
+  }
+  .img {
+    width: 100%;
+    border-radius: 0.75em 0.75em 0 0;
+    box-shadow: rgb(0 0 0 / 10%) 0 0.25rem 0.3rem -0.05rem,
+      rgb(0 0 0 / 6%) 0 0.125rem 0.25rem -0.05rem;
+  }
+}
+
 .info {
   padding: 1.5rem;
   display: flex;

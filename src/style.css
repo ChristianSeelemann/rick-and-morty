@@ -58,7 +58,13 @@ header h2 {
   background-color: #24282f;
   padding: 4rem 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
   column-gap: 1.5rem;
   row-gap: 1.75rem;
+}
+
+@media (max-width: 670px) {
+  .character {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
 }
