@@ -1,7 +1,9 @@
 import type { AllCharactersFromAPI, Character } from '../types';
 
-export async function getCharacters(): Promise<Character[]> {
-  const res = await fetch('https://rickandmortyapi.com/api/character');
+export async function getCharacters(search: string): Promise<Character[]> {
+  const res = await fetch(
+    `https://rickandmortyapi.com/api/character?name=${!search ? '' : search}`
+  );
   const data: AllCharactersFromAPI = await res.json();
   const characters = data.results;
 

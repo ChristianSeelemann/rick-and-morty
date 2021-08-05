@@ -4,9 +4,28 @@ import { characterCard } from './components/character/character';
 import { getCharacters } from './utils/api';
 import type { Character } from './types';
 
-const characters: Character[] = await getCharacters();
-
 const app = document.querySelector<HTMLDivElement>('#app');
+
+const characters: Character[] = await getCharacters('');
+
+const characterContainer = createElement('main', {
+  className: 'character',
+  childElements: characters.map((character) => characterCard(character)),
+});
+
+const searchElement = createElement('input', {
+  placeholder: 'Search your Charakter',
+  className: 'search__input',
+  oninput: async () => {
+    const search = searchElement.value;
+    const filteredCharacters = await getCharacters(search);
+    const newCharacters = filteredCharacters.map((filteredCharacter) =>
+      characterCard(filteredCharacter)
+    );
+    characterContainer.innerHTML = '';
+    characterContainer.append(...newCharacters);
+  },
+});
 
 const page = createElement('div', {
   id: 'page',
@@ -31,19 +50,11 @@ const page = createElement('div', {
         }),
         createElement('section', {
           className: 'search',
-          childElements: [
-            createElement('input', {
-              placeholder: 'Search your Charakter',
-              className: 'search__input',
-            }),
-          ],
+          childElements: [searchElement],
         }),
       ],
     }),
-    createElement('main', {
-      className: 'character',
-      childElements: characters.map((character) => characterCard(character)),
-    }),
+    characterContainer,
   ],
 });
 
