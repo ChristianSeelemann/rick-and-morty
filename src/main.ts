@@ -2,8 +2,9 @@ import './style.css';
 import { createElement } from './utils/createElement';
 import { characterCard } from './components/character/character';
 import { getCharacters } from './utils/api';
+import type { Character } from './types';
 
-const characters = await getCharacters();
+const characters: Character[] = await getCharacters();
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
