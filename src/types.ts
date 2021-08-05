@@ -29,11 +29,11 @@ export type CharacterFromAPI = {
 };
 
 export type AllCharactersFromAPI = {
-  results: CharacterFromAPI[];
   info: {
     count: number;
     pages: number;
     next: string | null;
     prev: string | null;
   };
+  results: CharacterFromAPI[];
 };
