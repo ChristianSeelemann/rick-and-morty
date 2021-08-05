@@ -1,40 +1,9 @@
 import './style.css';
 import { createElement } from './utils/createElement';
 import { characterCard } from './components/character/character';
-import { Character } from './types';
 import { getCharacters } from './utils/api';
 
-getCharacters();
-
-const characters: Character[] = [
-  {
-    name: 'Morty Smith',
-    thumbnail:
-      'https://www.denofgeek.com/wp-content/uploads/2021/03/Rick-and-Morty-Season-5-Trailer.jpg?resize=768%2C432',
-    status: 'Alive',
-    species: 'Human',
-    lastLocation: 'Earth (Replacement Dimension)',
-    gender: 'Male',
-  },
-  {
-    name: 'Morty Smith',
-    thumbnail:
-      'https://www.denofgeek.com/wp-content/uploads/2021/03/Rick-and-Morty-Season-5-Trailer.jpg?resize=768%2C432',
-    status: 'Alive',
-    species: 'Human',
-    lastLocation: 'Earth (Replacement Dimension)',
-    gender: 'Male',
-  },
-  {
-    name: 'Morty Smith',
-    thumbnail:
-      'https://www.denofgeek.com/wp-content/uploads/2021/03/Rick-and-Morty-Season-5-Trailer.jpg?resize=768%2C432',
-    status: 'Alive',
-    species: 'Human',
-    lastLocation: 'Earth (Replacement Dimension)',
-    gender: 'Male',
-  },
-];
+const characters = await getCharacters();
 
 const app = document.querySelector<HTMLDivElement>('#app');
 
